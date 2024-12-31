@@ -1,0 +1,151 @@
+.NavBar{
+    width: 80;
+    margin: 3rem auto;
+    position: relative;
+}
+.NavBar_box{
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.NavBar_box_left{
+padding-left:70px;
+}
+.navBar_box_right{
+    display:flex ;
+    align-items:center;
+    justify-content: space-between;
+}
+.navBar_box_right_menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease-in-out;
+}
+.active_button{
+    color:#F18303;
+    position: relative;
+    border-bottom: 2px solid #F18303;
+    padding-bottom: .4rem;
+    top:5px;
+    transition: 0.1s ease-out;
+
+}
+.Navbar_box_right_connect{
+    display: flex;
+    justify-self: flex-end;
+}
+.Navbar_box_right_connect button{
+    background-color:rgba(0,0,0,1.25);
+    padding: 1rem;
+    border:none;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    color:#F18303;
+    font-weight:700 ;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    margin-right: 30px;
+}
+.Navbar_box_right_open{
+    display: none;
+}
+.NavBar_box_mobile{
+    display: none;
+}
+.mobile_menu{
+    display: none;
+}
+.Navbar_box_right_connect_name{
+    position: relative;
+    bottom:4px;
+    margin-left: 3px;
+}
+
+
+/* modal component */
+.modalBox{
+    position: fixed;
+    inset:0 0 0 0;
+    background-color: #292F3F;
+    z-index:777777
+}
+
+/* media queries */
+@media screen and (max-width:800px){
+    .NavBar{
+        width: 90%;
+        margin:2rem auto ;
+    }
+    .NavBar_box{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .Navbar_box_right_connect button{
+        font-size: 1rem;
+        padding:.8rem;
+    }
+    .Navbar_box_right_open{
+        display: block;
+    }
+
+    .navBar_box_right_menu{
+        position: fixed;
+        z-index:111111;
+        background-color: #292F3F;
+        width: 100%;
+        flex-direction: column;
+        height: 100vh;
+        inset:0 0 0 0;
+        padding:4rem;
+        display:none;
+       
+
+    }
+    .Navbar_box_right_open{
+        display: block;
+    }
+    .NavBar_box_mobile{
+        display: block; 
+ 
+    }
+    .mobile_menu{
+        display:flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+         width: 200px;
+    }
+    .navBar_box_right{
+        margin:0px auto;
+    }
+    .active_button{
+        color:#F18303;
+        position: relative;
+        border-bottom: none;
+        padding-bottom:none;
+        top:0px;
+    }
+    .mobile_menu_items{
+        padding:3px 0px;
+    }
+    .NavBar_box_left{
+        margin-left: -50px;
+    }
+
+    .modalBox{
+        position: absolute;
+        inset:0 0 -70% 0%;
+    }
+
+
+}
+
+

@@ -1,7 +1,25 @@
-import React from "react";
+import React , {useState , useEffect , useContext} from "react";
 
-const index = () => {
-  return <div>index</div>;
+//internal imports
+import {ChatAppContect} from '../Context/ChatAppContext';
+import {Filter , Friend , Error} from '../Components/index';
+
+const ChatApp = () => {
+  //checking for metamask
+const [isMetaMaskInstalled, setIsMetaMaskInstalled] = useState(true); 
+useEffect(() => { 
+  if (typeof window.ethereum === 'undefined') { 
+    setIsMetaMaskInstalled(false); 
+  } });
+  return(
+    <div className="">{
+      isMetaMaskInstalled ? <><Filter/>
+      <Friend/></>:<><Error/></>
+    }
+
+    </div>
+  )
 };
 
-export default index;
+export default ChatApp;
+ 

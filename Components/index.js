@@ -7,3 +7,4 @@ import UserCard from "./UserCard/UserCard";
 import Friend from "./Friend/Friend";
 
 export { NavBar, Filter, Error, Loader, Model, UserCard, Friend };
+ 
